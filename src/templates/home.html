@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Accueil - {{block.super}}
+{% endblock title %}
+
+
+{% block content %}
+    <h1>hello agian !</h1>
+
+    {% include "snippets/welcome_user_msg" %}
+  <p> page visist : {{page_visits_count}}</p>
+  <p>total count : {{total_visit}}</p>
+  <p>total percentage : {{percent}}</p>
+{% endblock content %}
