@@ -2,21 +2,19 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+   {% include "base/css.html" %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}
                  Mon Saas 
         {% endblock title %}</title>
 </head>
 <body>
-
-    <h1>
-        hello world
-    </h1>
+    {% include "nav/navbar.html" %}
 
     {% block content %}
     asssjjnkbhjvhbjbjkbjjklbb
     {% endblock content %}
 
-    
+   {% include "base/js.html" %}
 </body>
 </html>
