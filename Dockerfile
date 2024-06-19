@@ -43,10 +43,11 @@ COPY ./src /code
 # Install the Python project requirements
 RUN pip install -r /tmp/requirements.txt
 
-ARG Django_SECRET_KEY
-ENV Django_SECRET_KEY=${Django_SECRET_KEY}
-ARG Django_DEBUG=0
-ENV Django_DEBUG=${Django_DEBUG}
+ARG DJANGO_SECRET_KEY
+ENV DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+
+ARG DJANGO_DEBUG=0
+ENV DJANGO_DEBUG=${DJANGO_DEBUG}
 # database isn't available during build
 # run any other commands that do not need the database
 # such as:
