@@ -18,9 +18,13 @@ from django.contrib import admin
 from django.urls import path
 from .views import Accueil
 from .views import About_view
+from auth.views import loginView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',Accueil),
-    path('about/',About_view)
+    path('about/',About_view),
+    path('login/',loginView)
+
+
 ]
